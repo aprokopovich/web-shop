@@ -1,0 +1,14 @@
+<project name="Build" default="reload.all" basedir=".">
+
+    <property file="build.${user.name}.properties"/>
+
+    <target name="reload.jsp">
+        <copy todir="${tomcat.jsp.dir}" overwrite="true">
+            <fileset dir="${project.jsp.dir}">
+                <include name="**/?*.*"/>
+            </fileset>
+        </copy>
+    </target>
+
+
+</project>
